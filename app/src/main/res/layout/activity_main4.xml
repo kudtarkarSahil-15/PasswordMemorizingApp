@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="80dp"
+    android:background="@drawable/front_activitybg"
+    tools:context=".MainActivity4">
+
+    <EditText
+        android:id="@+id/userId4"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Enter a User Name"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.289"
+        tools:ignore="TextContrastCheck" />
+    <EditText
+        android:id="@+id/passwordId4"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter a Password"
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/userId4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/userId4"
+        app:layout_constraintTop_toBottomOf="@+id/userId4"
+        tools:ignore="TextContrastCheck" />
+    
+    <EditText
+        android:id="@+id/domainId4"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter a Domain"
+        android:textColorHint="@color/black"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/passwordId4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordId4"
+        app:layout_constraintTop_toBottomOf="@+id/passwordId4"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/userTextId4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/userId4"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299" />
+
+    <TextView
+        android:id="@+id/passwordTextId4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Password :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="@+id/userTextId4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userTextId4"
+        app:layout_constraintTop_toBottomOf="@+id/userTextId4" />
+
+    <TextView
+        android:id="@+id/domainTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="  Domain :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTextId4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordTextId4"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextId4" />
+
+    <Button
+        android:id="@+id/addButtonId4"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#FF8E24AA"
+        android:text="ADD"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelButtonId4"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButtonId4"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancelButtonId4"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/cancelButtonId4"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#FF8E24AA"
+        android:text="CANCEL"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/domainId4"
+        app:layout_constraintVertical_bias="0.291"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

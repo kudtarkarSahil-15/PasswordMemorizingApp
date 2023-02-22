@@ -8,13 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     //fields
     private TextView signUp, signTextIns ;
-    private EditText emailInput, passwordInput;
+    private EditText emailInputR, passwordInputR;
     private Button buttonLogin;
+    Database1 rd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         /* References */
         signUp = findViewById(R.id.signUpView);
-        emailInput = findViewById(R.id.emailInput);
-        passwordInput = findViewById(R.id.passwordInput);
+        emailInputR = findViewById(R.id.emailInput);
+        passwordInputR = findViewById(R.id.passwordInput);
         buttonLogin = findViewById(R.id.buttonLogin);
+
+        /**/
+        rd = new Database1(this);
 
         /*go to signUpView*/
         signUp.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +41,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*after sign up*/
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                String emailDataL = emailInputR.getText().toString();
+                String passwordDataL = passwordInputR.getText().toString();
+
+                if(emailDataL.equals("") || passwordDataL.equals("")) {
+                    Toast.makeText(MainActivity.this, "complete all fields", Toast.LENGTH_SHORT).show();
+
+                }
+                else {
+                    boolean matchVal = rd.loginIn(emailDataL,passwordDataL);
+                    if(matchVal == true) {
+                        Toast.makeText(MainActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();
+
+                        Intent in = new Intent(MainActivity.this, MainActivity3.class);
+                        startActivity(in);
+                    }
+                    else {
+                        Toast.makeText(MainActivity.this, "check your username and password..!!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
 
 

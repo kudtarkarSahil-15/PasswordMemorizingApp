@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="80dp"
+    android:background="@drawable/front_activitybg"
+    tools:context=".MainActivity5">
+
+
+    <EditText
+        android:id="@+id/userNameId5"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Enter a User Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.283"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/passwordId5"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter a Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/userNameId5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/userNameId5"
+        app:layout_constraintTop_toBottomOf="@+id/userNameId5"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/domainId5"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter a Domain"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/passwordId5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordId5"
+        app:layout_constraintTop_toBottomOf="@+id/passwordId5"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/userTextId5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameId5"
+        app:layout_constraintEnd_toStartOf="@+id/userNameId5"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userNameId5" />
+
+    <TextView
+        android:id="@+id/passwordTextId5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Password :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/userTextId5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userTextId5"
+        app:layout_constraintTop_toBottomOf="@+id/userTextId5" />
+
+    <TextView
+        android:id="@+id/domainTextId5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Domain :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/domainId5"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTextId5"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="@+id/passwordTextId5"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextId5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/updateButtonId"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#FF8E24AA"
+        android:text="UPDATE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelButtonId5"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButtonId5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancelButtonId5"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/cancelButtonId5"
+        android:layout_width="125dp"
+        android:layout_height="52dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#FF8E24AA"
+        android:text="DELETE"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/domainId5"
+        app:layout_constraintVertical_bias="0.287"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/copyUserId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:backgroundTint="@android:color/white"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userNameId5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userNameId5"
+        app:layout_constraintTop_toTopOf="@+id/userNameId5"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_content_copy_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/copyPasswordId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:backgroundTint="@android:color/white"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordId5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passwordId5"
+        app:layout_constraintTop_toTopOf="@+id/passwordId5"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_content_copy_24"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
